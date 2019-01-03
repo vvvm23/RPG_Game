@@ -73,6 +73,17 @@ int main() {
 
     display_ui("Team Laura", "Team Coffee", blufor, opfor, 6, 1, "You were challenged by Robbie!");
 
+    if (1) {
+        printf("1 is true\n");
+    }
+    if (0) {
+        printf("0 is true\n");
+    }
 
+    char buffer[1024];
+    snprintf(buffer, 1024, "this is a test to see if buffer makes text_crawl sssslllooowww\n");
+    text_crawl(buffer, 50);
+
+    printf("Length of blufor is %ld\n", sizeof(blufor)/sizeof(blufor[0]));
     return 0;
 }

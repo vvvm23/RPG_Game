@@ -106,6 +106,8 @@ typedef struct Entity {
     unsigned int sp;
     unsigned int speed;
     float accuracy;
+    int defend;
+    int cons_defend;
 
     Move moves[4];
     Item equipped_weapon;

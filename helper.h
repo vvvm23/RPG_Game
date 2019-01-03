@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <string.h>
 
 void clear() {
     system("@cls||clear");
@@ -34,3 +35,22 @@ void play_audio() {
 char get_char() {
     return fgetc(stdin);
 }
+
+int menu_choice(int min, int max) {
+    int in;
+    in = (int) fgetc(stdin);
+
+    if (in < min || in > max) {
+        return 0;
+    }
+    else {
+        return in;
+    }
+}
+
+/*int compare(const void *a, const void * b) {
+    Entity *entityA = (Entity *)a;
+    Entity *entityB = (Entity *)b;
+
+    return (entityA->speed - entityB->speed);
+}*/
